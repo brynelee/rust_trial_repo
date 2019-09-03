@@ -11,7 +11,6 @@ pub mod string_slice_demo {
     }
 
     pub fn string_and_slice_demo() {
-
         let my_string = String::from("hello world");
 
         // first_word 中传入 `String` 的 slice
@@ -31,7 +30,31 @@ pub mod string_slice_demo {
         let word3 = first_word(my_string_literal);
 
         println!("the word is {}", word3);
+    }
 
+    pub fn demo_string_connection_func() {
+        let s1 = String::from("tic");
+        let s2 = String::from("tac");
+        let s3 = String::from("toe");
+
+        let s4 = s1 + "-" + &s2 + "-" + &s3;
+        println!("s4 now is {}", s4);
+
+        // a better way by using format
+
+        let s1 = String::from("tic");
+        let s2 = String::from("tac");
+        let s3 = String::from("toe");
+
+        let s4 = format!("{}-{}-{}", s1, s2, s3);
+
+        println!("s4 is {}", s4);
+
+        //indexing characters
+
+        for c in "中华人民共和国".chars() {
+            println!("{}", c);
+        }
     }
 
 }
