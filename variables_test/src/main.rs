@@ -1,11 +1,13 @@
 mod area_support;
-mod struct_test;
-mod string_test;
 mod enum_test;
+mod gen_type_test;
+mod hash_test;
+mod string_test;
+mod struct_test;
+mod trait_test;
 mod vector_test;
 
 fn main() {
-
     area_support::area::area_demo();
 
     string_test::string_slice_demo::string_and_slice_demo();
@@ -24,4 +26,14 @@ fn main() {
 
     vector_test::vector_demo::iteration_vector_func();
 
+    hash_test::hash_demo::hash_demo_func();
+
+    hash_test::hash_demo::hash_demo_func2();
+
+    //generic type demos
+    gen_type_test::gen_type_test::gen_type_test_func1();
+    gen_type_test::gen_type_test::gen_type_test_func2();
+
+    //trait demo
+    trait_test::trait_test::trait_test_func1();
 }
