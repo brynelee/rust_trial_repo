@@ -2,6 +2,7 @@ mod area_support;
 mod enum_test;
 mod gen_type_test;
 mod hash_test;
+mod lifetime_test;
 mod string_test;
 mod struct_test;
 mod trait_test;
@@ -36,4 +37,8 @@ fn main() {
 
     //trait demo
     trait_test::trait_test::trait_test_func1();
+
+    //lifetime demo
+    lifetime_test::lifetime_test::lifetime_test_func1();
+    lifetime_test::lifetime_test::lieftime_test_func2();
 }
