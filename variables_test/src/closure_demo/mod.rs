@@ -5,7 +5,7 @@ pub mod cacher_demo;
 fn generate_workout(intensity: u32, random_number: u32) {
     let expensive_closure = |num| {
         println!("calculating slowly...");
-        thread::sleep(Duration::from_secs(2));
+        thread::sleep(Duration::from_millis(100));
         num
     };
 

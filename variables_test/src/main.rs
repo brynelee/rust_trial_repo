@@ -4,8 +4,10 @@ mod enum_test;
 mod gen_type_test;
 mod hash_test;
 mod lifetime_test;
+mod oop_demo;
 mod string_test;
 mod struct_test;
+mod thread_demo;
 mod trait_test;
 mod vector_test;
 
@@ -46,4 +48,13 @@ fn main() {
     //closure demo
     closure_demo::closure_demo_func();
     closure_demo::cacher_demo::closure_demo_with_cacher_func();
+
+    //thread demo
+    thread_demo::thread_demo_func();
+    thread_demo::thread_demo_func2();
+    thread_demo::thread_demo_multi_receiver_func();
+    thread_demo::thread_mutex_demo_func();
+B
+    //oop oop
+    oop_demo::oop_demo_func();
 }
