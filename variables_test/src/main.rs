@@ -54,7 +54,7 @@ fn main() {
     thread_demo::thread_demo_func2();
     thread_demo::thread_demo_multi_receiver_func();
     thread_demo::thread_mutex_demo_func();
-B
+    
     //oop oop
     oop_demo::oop_demo_func();
 }
