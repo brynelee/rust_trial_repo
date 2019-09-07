@@ -1,4 +1,5 @@
 mod area_support;
+mod closure_demo;
 mod enum_test;
 mod gen_type_test;
 mod hash_test;
@@ -41,4 +42,8 @@ fn main() {
     //lifetime demo
     lifetime_test::lifetime_test::lifetime_test_func1();
     lifetime_test::lifetime_test::lieftime_test_func2();
+
+    //closure demo
+    closure_demo::closure_demo_func();
+    closure_demo::cacher_demo::closure_demo_with_cacher_func();
 }
