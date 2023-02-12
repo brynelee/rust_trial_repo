@@ -13,6 +13,8 @@ fn main() {
     demo_judgement_program();
 
     match_demo();
+
+    loop_demo();
 }
 
 fn const_demo(){
@@ -79,6 +81,47 @@ fn match_demo(){
      println!("选择 {}", choose);
      //输出 选择 Unknown
      
+
+
+}
+
+//循环语法
+
+fn loop_demo(){
+
+    println!("\n\nloop_demo ...\n");
+
+    let studyList = vec![
+        "《Go语言极简一本通》",
+        "Go语言微服务架构核心22讲",
+        "从0到Go语言微服务架构师",
+    ];
+    for name in studyList.iter() {
+        match name {
+            &"从0到Go语言微服务架构师" => println!("恭喜你进阶到第三阶段-{}!", name),
+            _ => println!("学习: {}", name),
+        }
+    }
+
+    println!("\nstudyList now length is : {}", studyList.len());
+
+    //into_iter()
+
+    let studyList2 = vec![
+        "《Go语言极简一本通》",
+        "Go语言微服务架构核心22讲",
+        "从0到Go语言微服务架构师",
+    ];
+    for name in studyList2.into_iter() {
+        match name {
+            "从0到Go语言微服务架构师" => println!("恭喜你进阶到第三阶段-{}!", name),
+            _ => println!("学习: {}", name),
+        }
+    }
+
+    //value borrowed here after move
+
+    //println!("\nstudyList2 now length is : {}", studyList2.len());
 
 
 }
